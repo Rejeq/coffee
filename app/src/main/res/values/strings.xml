@@ -23,7 +23,7 @@
     <string name="menu_img_desc">Menu image</string>
     <string name="remove_item_btn_desc">Remove Item</string>
     <string name="add_item_btn_desc">Add Item</string>
-    <string name="price_rub">$.2f rub</string>
+    <string name="price_rub">%.2f rub</string>
 
     <string name="order_notification">Order time is 15 minutes!\nThanks for choosing us!</string>
 
