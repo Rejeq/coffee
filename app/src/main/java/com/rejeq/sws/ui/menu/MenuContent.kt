@@ -120,8 +120,7 @@ fun MenuListContent(
 ) {
     LazyVerticalGrid(
         modifier = modifier.fillMaxHeight().padding(horizontal = 16.dp),
-        columns = GridCells.Adaptive(minSize = 128.dp),
-//        columns = GridCells.Fixed(2),
+        columns = GridCells.Adaptive(minSize = 156.dp),
         horizontalArrangement = Arrangement.spacedBy(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
         contentPadding = PaddingValues(vertical = 8.dp),
