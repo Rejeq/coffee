@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name" translatable="false">Coffee</string>
+
+    <string name="back_btn_desc">Back to previous screen</string>
+
+    <string name="register_top_bar_title">Register</string>
+    <string name="login_top_bar_title">Login</string>
+    <string name="shops_top_bar_title">Near Coffee Shops</string>
+    <string name="menu_top_bar_title">Menu</string>
+    <string name="order_top_bar_title">Order</string>
+    <string name="map_top_bar_title">Map</string>
+
+    <string name="email_field_title">Email</string>
+    <string name="password_field_title">Password</string>
+    <string name="repeat_password_field_title">Repeat password</string>
+
+    <string name="login_btn_title">Login</string>
+    <string name="register_btn_title">Register</string>
+    <string name="open_on_map_btn_title">On map</string>
+    <string name="open_order_btn_title">Order now</string>
+    <string name="open_payment_btn_title">Pay</string>
+
+    <string name="menu_img_desc">Menu image</string>
+    <string name="remove_item_btn_desc">Remove Item</string>
+    <string name="add_item_btn_desc">Add Item</string>
+    <string name="price_rub">$.2f rub</string>
+
+    <string name="order_notification">Order time is 15 minutes!\nThanks for choosing us!</string>
+
+    <plurals name="distance_kilometers">
+        <item quantity="one">%d km from you</item>
+        <item quantity="other">%d km from you</item>
+    </plurals>
+
+    <plurals name="distance_meters">
+        <item quantity="one">%d meter from you</item>
+        <item quantity="other">%d meters from you</item>
+    </plurals>
+</resources>
