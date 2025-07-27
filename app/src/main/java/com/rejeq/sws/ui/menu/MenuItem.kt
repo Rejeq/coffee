@@ -53,17 +53,15 @@ fun MenuItemContent(
         modifier = modifier,
         shape = RoundedCornerShape(8.dp),
     ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            AsyncImage(
-                model = state.imageUrl,
-                contentDescription = stringResource(R.string.menu_img_desc),
-                modifier = Modifier.fillMaxWidth(),
-                placeholder = painterResource(R.drawable.ic_image_24dp),
-                error = painterResource(R.drawable.ic_image_24dp),
-            )
-        }
+        AsyncImage(
+            model = state.imageUrl,
+            contentDescription = stringResource(R.string.menu_img_desc),
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .fillMaxWidth(),
+            placeholder = painterResource(R.drawable.ic_image_24dp),
+            error = painterResource(R.drawable.ic_image_24dp),
+        )
 
         Column(
             modifier = Modifier.padding(
