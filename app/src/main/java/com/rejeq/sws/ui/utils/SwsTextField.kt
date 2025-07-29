@@ -105,7 +105,7 @@ fun TextFieldValue.selectAll(): TextFieldValue = this.copy(
 @Preview
 @PreviewLightDark
 @PreviewDynamicColors
-fun PreviewSwsTextField() {
+private fun PreviewSwsTextField() {
     SwsTheme {
         Surface {
             Column {

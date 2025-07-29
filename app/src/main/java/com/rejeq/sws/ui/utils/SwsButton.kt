@@ -28,7 +28,7 @@ fun SwsButton(
 @Preview
 @PreviewLightDark
 @PreviewDynamicColors
-fun PreviewSwsButton() {
+private fun PreviewSwsButton() {
     SwsTheme {
         SwsButton(
             onClick = {},

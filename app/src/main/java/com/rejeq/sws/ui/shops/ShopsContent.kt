@@ -125,8 +125,8 @@ fun ShopsListContent(
 fun ShopsLayout(
     topBar: @Composable () -> Unit,
     bottomButton: @Composable () -> Unit,
-    content: @Composable () -> Unit,
     modifier: Modifier = Modifier,
+    content: @Composable () -> Unit,
 ) {
     Scaffold(
         modifier = modifier,
@@ -162,7 +162,7 @@ fun RequestPermissionSideEffect(
         onPermissionResult(isGranted)
     }
 
-    LaunchedEffect(hasLocationPermission) {
+    LaunchedEffect(hasLocationPermission, onPermissionResult) {
         if (!hasLocationPermission) {
             launcher.launch(permission)
         } else {
@@ -176,7 +176,7 @@ fun RequestPermissionSideEffect(
 @PreviewLightDark
 @PreviewDynamicColors
 @PreviewScreenSizes
-fun InfoContentPreview() {
+private fun InfoContentPreview() {
     SwsTheme {
         ShopsContent(
             vm = remember { PreviewShopsViewModel() },

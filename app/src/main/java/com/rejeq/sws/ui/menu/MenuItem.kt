@@ -27,22 +27,6 @@ import com.rejeq.sws.ui.theme.SwsTheme
 import com.rejeq.sws.ui.utils.QuantitySlider
 import com.rejeq.sws.ui.utils.toLocalizedPriceString
 
-data class MenuItemState(
-    val id: Long,
-    val title: String,
-    val imageUrl: String,
-    val price: Double,
-    val quantity: Int,
-)
-
-fun CoffeeShopMenu.toMenuItemState(quantity: Int) = MenuItemState(
-    id = id,
-    title = name,
-    imageUrl = imageURL,
-    price = price,
-    quantity = quantity,
-)
-
 @Composable
 fun MenuItemContent(
     state: MenuItemState,
@@ -95,6 +79,22 @@ fun MenuItemContent(
         }
     }
 }
+
+data class MenuItemState(
+    val id: Long,
+    val title: String,
+    val imageUrl: String,
+    val price: Double,
+    val quantity: Int,
+)
+
+fun CoffeeShopMenu.toMenuItemState(quantity: Int) = MenuItemState(
+    id = id,
+    title = name,
+    imageUrl = imageURL,
+    price = price,
+    quantity = quantity,
+)
 
 @Composable
 @Preview

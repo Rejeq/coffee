@@ -36,22 +36,20 @@ fun QuantitySlider(
 
 @Composable
 fun MinusButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
-    IconButton(onClick = onClick) {
+    IconButton(onClick = onClick, modifier = modifier) {
         Icon(
             painter = painterResource(R.drawable.ic_remove_24dp),
             contentDescription = stringResource(R.string.remove_item_btn_desc),
-            modifier = modifier,
         )
     }
 }
 
 @Composable
 fun PlusButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
-    IconButton(onClick = onClick) {
+    IconButton(onClick = onClick, modifier = modifier) {
         Icon(
             painter = painterResource(R.drawable.ic_add_24dp),
             contentDescription = stringResource(R.string.add_item_btn_desc),
-            modifier = modifier,
         )
     }
 }

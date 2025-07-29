@@ -93,8 +93,8 @@ fun MenuContent(
 fun MenuLayout(
     topBar: @Composable () -> Unit,
     bottomButton: @Composable () -> Unit,
-    content: @Composable BoxScope.() -> Unit,
     modifier: Modifier = Modifier,
+    content: @Composable BoxScope.() -> Unit,
 ) {
     Scaffold(
         modifier = modifier,

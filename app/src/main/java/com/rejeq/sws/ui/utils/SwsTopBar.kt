@@ -111,7 +111,7 @@ fun TwoLines(modifier: Modifier = Modifier) {
 @Preview
 @PreviewLightDark
 @PreviewDynamicColors
-fun PreviewSwsTopBar() {
+private fun PreviewSwsTopBar() {
     SwsTheme {
         SwsTopBar(
             title = "Title",
@@ -124,7 +124,7 @@ fun PreviewSwsTopBar() {
 @Preview
 @PreviewLightDark
 @PreviewDynamicColors
-fun PreviewSwsTopBarWithoutBackButton() {
+private fun PreviewSwsTopBarWithoutBackButton() {
     SwsTheme {
         SwsTopBar(
             title = "Title",
@@ -136,7 +136,7 @@ fun PreviewSwsTopBarWithoutBackButton() {
 @Preview
 @PreviewLightDark
 @PreviewDynamicColors
-fun PreviewSwsTopBarWithLongTitle() {
+private fun PreviewSwsTopBarWithLongTitle() {
     SwsTheme {
         SwsTopBar(
             title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit," +

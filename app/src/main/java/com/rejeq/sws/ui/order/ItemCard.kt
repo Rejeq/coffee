@@ -55,7 +55,7 @@ fun OrderItemContent(
 @Preview
 @PreviewLightDark
 @PreviewDynamicColors
-fun OrderItemContentPreview() {
+private fun OrderItemContentPreview() {
     SwsTheme {
         OrderItemContent(
             state = OrderItemState(

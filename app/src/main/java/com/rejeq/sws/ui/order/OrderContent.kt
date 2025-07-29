@@ -87,8 +87,8 @@ fun OrderContent(
 fun MenuLayout(
     topBar: @Composable () -> Unit,
     bottomButton: @Composable () -> Unit,
-    content: @Composable () -> Unit,
     modifier: Modifier = Modifier,
+    content: @Composable () -> Unit,
 ) {
     Scaffold(
         modifier = modifier,
