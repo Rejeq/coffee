@@ -1,8 +1,8 @@
+import io.gitlab.arturbosch.detekt.Detekt
+import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
 import java.io.FileInputStream
 import java.lang.System.load
 import java.util.Properties
-import io.gitlab.arturbosch.detekt.Detekt
-import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
 
 plugins {
     alias(libs.plugins.android.application)
@@ -147,6 +147,7 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.mockk)
+    testImplementation(kotlin("test"))
 
     detektPlugins(libs.detekt.rules.compose)
     debugImplementation(libs.leakcanary)
