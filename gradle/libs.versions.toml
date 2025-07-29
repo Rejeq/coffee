@@ -27,6 +27,8 @@ appcompat = "1.7.1"
 yandexMap = "0.3.1"
 androidxNavigation = "2.9.2"
 androidxHiltNavigationCompose = "1.2.0"
+detekt = "1.23.8"
+detektCompose = "0.4.23"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -86,6 +88,8 @@ androidx-navigation-testing = { module = "androidx.navigation:navigation-testing
 
 androidx-navigation-hilt-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 
+detekt-rules-compose = { module = "io.nlopez.compose.rules:detekt", version.ref = "detektCompose" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -99,3 +103,4 @@ hilt = { id = "com.google.dagger", version.ref = "hilt" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 androidx-room = { id = "androidx.room", version.ref = "room" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }

@@ -1,6 +1,8 @@
 import java.io.FileInputStream
 import java.lang.System.load
 import java.util.Properties
+import io.gitlab.arturbosch.detekt.Detekt
+import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
 
 plugins {
     alias(libs.plugins.android.application)
@@ -12,6 +14,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.androidx.room)
+    alias(libs.plugins.detekt)
 }
 
 val localProperties = Properties().apply {
@@ -75,6 +78,31 @@ android {
     androidResources.localeFilters += listOf("en", "ru")
 }
 
+detekt {
+    config.setFrom("${project.rootDir}/detekt.yml")
+    buildUponDefaultConfig = true
+}
+
+tasks.withType<Detekt>().configureEach {
+    jvmTarget = "17"
+
+    reports {
+        val detektDir = layout.buildDirectory.dir("reports/detekt")
+
+        html.required.set(true)
+        html.outputLocation.set(detektDir.map { it.file("detekt.html") })
+
+        md.required.set(false)
+        sarif.required.set(false)
+        txt.required.set(false)
+        xml.required.set(false)
+    }
+}
+
+tasks.withType<DetektCreateBaselineTask> {
+    jvmTarget = "17"
+}
+
 dependencies {
     ksp(libs.hilt.android.compiler)
     implementation(libs.hilt.android)
@@ -120,6 +148,7 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.mockk)
 
+    detektPlugins(libs.detekt.rules.compose)
     debugImplementation(libs.leakcanary)
 
     implementation(libs.androidx.core.ktx)
